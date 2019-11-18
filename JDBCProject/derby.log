@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Oct 21 09:38:38 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016d-ef2f-4fb1-0000079f03f8 
+on database directory /Users/samantharain/Documents/CECS323/Databases/JDBC with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 
+Loaded from file:/Users/samantharain/Downloads/db-derby-10.15.1.3-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13+33
+user.dir=/Users/samantharain/Documents/workspace/JDBCProject
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

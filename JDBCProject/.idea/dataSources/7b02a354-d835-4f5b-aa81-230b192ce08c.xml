@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="JDBC">
+  <database-model serializer="dbm" rdbms="DERBY" format-version="4.11">
+    <root id="1">
+      <ServerVersion>10.14</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="APP">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SQLJ"/>
+    <schema id="5" parent="1" name="SYS"/>
+    <schema id="6" parent="1" name="SYSCAT"/>
+    <schema id="7" parent="1" name="SYSCS_DIAG"/>
+    <schema id="8" parent="1" name="SYSCS_UTIL"/>
+    <schema id="9" parent="1" name="SYSFUN"/>
+    <schema id="10" parent="1" name="SYSIBM"/>
+    <schema id="11" parent="1" name="SYSPROC"/>
+    <schema id="12" parent="1" name="SYSSTAT"/>
+    <table id="13" parent="2" name="BOOKS"/>
+    <table id="14" parent="2" name="PUBLISHERS"/>
+    <table id="15" parent="2" name="WRITINGGROUPS"/>
+    <column id="16" parent="13" name="GROUPNAME">
+      <Position>1</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="13" name="BOOKTITLE">
+      <Position>2</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="13" name="PUBLISHERNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="13" name="YEARPUBLISHED">
+      <Position>4</Position>
+      <DataType>VARCHAR(4)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="13" name="NUMBERPAGES">
+      <Position>5</Position>
+      <DataType>VARCHAR(5)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="21" parent="13" name="SQL191021003715330">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GROUPNAME
+BOOKTITLE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="22" parent="13" name="SQL191021003715410">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GROUPNAME</ColNames>
+    </index>
+    <index id="23" parent="13" name="SQL191021003715820">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PUBLISHERNAME</ColNames>
+    </index>
+    <key id="24" parent="13" name="PK_BOOKS">
+      <ColNames>GROUPNAME
+BOOKTITLE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="13" name="FK_GROUPNAME">
+      <ColNames>GROUPNAME</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>WRITINGGROUPS</RefTableName>
+      <RefKeyName>PK_WRITINGGROUPS</RefKeyName>
+      <RefColNames>GROUPNAME</RefColNames>
+    </foreign-key>
+    <foreign-key id="26" parent="13" name="FK_PUBLISHERNAME">
+      <ColNames>PUBLISHERNAME</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>PUBLISHERS</RefTableName>
+      <RefKeyName>PK_PUBLISHERES</RefKeyName>
+      <RefColNames>PUBLISHERNAME</RefColNames>
+    </foreign-key>
+    <column id="27" parent="14" name="PUBLISHERNAME">
+      <Position>1</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="14" name="PUBLISHERADDRESS">
+      <Position>2</Position>
+      <DataType>VARCHAR(60)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="14" name="PUBLISHERPHONE">
+      <Position>3</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="14" name="PUBLISHEREMAIL">
+      <Position>4</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="31" parent="14" name="SQL191021003715180">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PUBLISHERNAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="14" name="PK_PUBLISHERES">
+      <ColNames>PUBLISHERNAME</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="15" name="GROUPNAME">
+      <Position>1</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="15" name="HEADWRITER">
+      <Position>2</Position>
+      <DataType>VARCHAR(40)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="15" name="YEARFORMED">
+      <Position>3</Position>
+      <DataType>VARCHAR(4)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="15" name="SUBJECT">
+      <Position>4</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="37" parent="15" name="SQL191021003715020">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GROUPNAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="15" name="PK_WRITINGGROUPS">
+      <ColNames>GROUPNAME</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
